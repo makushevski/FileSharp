@@ -1,5 +1,8 @@
 # FileSharp
 
+![License](https://img.shields.io/github/license/makushevski/FileSharp)
+![Stars](https://img.shields.io/github/stars/makushevski/FileSharp?style=social)
+
 FileSharp is a toolkit of single-file C# utilities for DevOps, CI/CD, operations, and database teams. Every tool is a regular C# file that can be executed with `dotnet run`, so you can keep automation scripts versioned together with infrastructure definitions.
 
 ## Highlights
@@ -65,6 +68,7 @@ The metadata keeps the catalog up to date and powers future automation (indexing
 | Script | Summary |
 | ------ | ------- |
 | [`hash-directory`](docs/tools/hash-directory.md) | Calculates SHA256 for every file in a directory and prints an overall digest. |
+| [`validate-json`](docs/tools/validate-json.md) | Validates JSON files (single files or directories) and reports syntax errors with line/byte locations. |
 
 ### CI/CD
 
@@ -111,7 +115,7 @@ Add additional `// #   ...` usage lines if a script has more than one common inv
 
 ## Contributing
 
-We welcome pull requests! Please read `CONTRIBUTE.md` for details on how to set up your environment, follow the coding guidelines, and run verification scripts before opening a PR.
+We welcome pull requests! Please read `CONTRIBUTING.md` for details on how to set up your environment, follow the coding guidelines, and run verification scripts before opening a PR.
 
 ## License
 
