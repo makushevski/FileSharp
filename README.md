@@ -67,8 +67,9 @@ The metadata keeps the catalog up to date and powers future automation (indexing
 
 | Script | Summary |
 | ------ | ------- |
-| [`hash-directory`](docs/tools/hash-directory.md) | Calculates SHA256 for every file in a directory and prints an overall digest. |
-| [`validate-json`](docs/tools/validate-json.md) | Validates JSON files (single files or directories) and reports syntax errors with line/byte locations. |
+| [`hash-directory`](docs/scripts/tools/hash-directory.md) | Calculates SHA256 for every file in a directory and prints an overall digest. |
+| [`validate-json`](docs/scripts/tools/validate-json.md) | Validates JSON files (single files or directories) and reports syntax errors with line/byte locations. |
+| [`find-large-files`](docs/scripts/tools/find-large-files.md) | Lists the biggest files under a path so you can spot oversized artifacts quickly. |
 
 ### CI/CD
 
@@ -84,12 +85,18 @@ _(Add entries as they are published.)_
 
 More scripts are coming soon. When you add a new tool, describe it under the appropriate category table, link to its doc page, and add the `.cs` location in the summary if helpful.
 
+## Recipes
+
+Scenario guides show how to mix multiple scripts to solve workflow problems (Git hooks, CI stages, operations runbooks).
+
+- [Git Hooks / Pre-commit JSON and Large File Gate](docs/recipes/git-hooks/README.md#pre-commit-json-and-large-file-gate)
+
 ## Creating a New Script
 
 1. Copy an existing file (e.g., `hash-directory.cs`) into the right category.
 2. Update the metadata block at the top (`name`, `category`, `description`).
 3. Implement the logic using top-level statements. Prefer deterministic console output.
-4. Create `docs/<category>/<script-name>.md` with usage examples, parameters, and caveats.
+4. Create `docs/scripts/<category>/<script-name>.md` with usage examples, parameters, and caveats.
 5. Update the README catalog and, if needed, add automation examples to `docs/`.
 
 ### Script Header Format
@@ -110,7 +117,7 @@ Add additional `// #   ...` usage lines if a script has more than one common inv
 ## Documentation
 
 - `docs/` contains human-friendly walkthroughs and usage notes.
-- `docs/tools/` stores per-script references; feel free to add more directories such as `docs/ci/`.
+- `docs/scripts/<category>/` stores per-script references; feel free to add more directories such as `docs/scripts/ci/`.
 - Keep prose concise and link back to the command examples shown above.
 
 ## Contributing
