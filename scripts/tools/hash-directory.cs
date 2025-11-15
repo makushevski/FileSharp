@@ -1,6 +1,6 @@
 ﻿// # name: Hash Directory
 // # category: tools
-// # description: Считает SHA256-хеш для всех файлов в папке и общий хеш по содержимому/именам.
+// # description: Produce deterministic SHA256 checksums for every file under the target path and emit a combined digest
 // # usage:
 // #   dotnet run scripts/tools/hash-directory.cs -- .
 // #   dotnet run scripts/tools/hash-directory.cs -- C:\Projects\MyApp
