@@ -20,7 +20,7 @@ docs/
   tools/             # Reference for each script
 LICENSE
 README.md
-CONTRIBUTE.md
+CONTRIBUTING.md
 ```
 
 Only a subset of scripts are currently published; new utilities follow the same layout.
@@ -60,11 +60,25 @@ The metadata keeps the catalog up to date and powers future automation (indexing
 
 ## Script Catalog
 
-| Script | Category | Summary |
-| ------ | -------- | ------- |
-| `scripts/tools/hash-directory.cs` | tools | Calculates SHA256 for every file in a directory and prints an overall digest. |
+### Tools
 
-More scripts are coming soon. When you add a new tool, describe it under the appropriate category table and add a doc page.
+| Script | Summary |
+| ------ | ------- |
+| [`hash-directory`](docs/tools/hash-directory.md) | Calculates SHA256 for every file in a directory and prints an overall digest. |
+
+### CI/CD
+
+_(Add entries as they are published.)_
+
+### DevOps / Infrastructure
+
+_(Add entries as they are published.)_
+
+### Database
+
+_(Add entries as they are published.)_
+
+More scripts are coming soon. When you add a new tool, describe it under the appropriate category table, link to its doc page, and add the `.cs` location in the summary if helpful.
 
 ## Creating a New Script
 
