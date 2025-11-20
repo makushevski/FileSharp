@@ -64,36 +64,16 @@ Every script prints a short help section when executed without arguments. Follow
 
 The metadata keeps the catalog up to date and powers future automation (indexing, docs, packaging).
 
-## Script Catalog 📚
+## Script Catalog
 
-### Tools
+The detailed catalog now lives in [docs/scripts/README.md](docs/scripts/README.md). Browse that page for per-category tables, command summaries, and links to every script doc.
 
-| Script | Summary |
-| ------ | ------- |
-| [`hash-directory`](docs/scripts/tools/hash-directory.md) | Calculates SHA256 for every file in a directory and prints an overall digest. |
-| [`validate-json`](docs/scripts/tools/validate-json.md) | Validates JSON files (single files or directories) and reports syntax errors with line/byte locations. |
-| [`find-large-files`](docs/scripts/tools/find-large-files.md) | Lists the biggest files under a path so you can spot oversized artifacts quickly. |
-
-### CI/CD
-
-_(Add entries as they are published.)_
-
-### DevOps / Infrastructure
-
-_(Add entries as they are published.)_
-
-### Database
-
-_(Add entries as they are published.)_
-
-More scripts are coming soon. When you add a new tool, describe it under the appropriate category table, link to its doc page, and add the `.cs` location in the summary if helpful. Keep the ideas flowing and brag about your favorites in chat threads 🎉.
 
 ## Recipes 🧩
 
 Scenario guides show how to mix multiple scripts to solve workflow problems (Git hooks, CI stages, operations runbooks).
 
 - **🧩 Recipes** - you can find some hands on recipes for some scripts in [this table](docs/recipes/README.md).
-- [Git Hooks / Pre-commit JSON and Large File Gate](docs/recipes/git-hooks/README.md#pre-commit-json-and-large-file-gate)
 
 ## Creating a New Script 🔧
 
@@ -101,7 +81,7 @@ Scenario guides show how to mix multiple scripts to solve workflow problems (Git
 2. Update the metadata block at the top (`name`, `category`, `description`).
 3. Implement the logic using top-level statements. Prefer deterministic console output.
 4. Create `docs/scripts/<category>/<script-name>.md` with usage examples, parameters, and caveats.
-5. Update the README catalog and, if needed, add automation examples to `docs/`.
+5. Update `docs/scripts/README.md` (the catalog) and, if needed, add automation examples to `docs/`.
 
 ### Script Header Format 📝
 
@@ -133,5 +113,6 @@ We welcome pull requests! Please read `CONTRIBUTING.md` for details on how to se
 FileSharp is distributed under the terms of the MIT License. See `LICENSE` for full text.
 
 Happy scripting and automate boldly! 😄
+
 
 
