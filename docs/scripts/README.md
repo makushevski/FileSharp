@@ -4,11 +4,11 @@ Browse every FileSharp script by category. Each entry links to its detailed doc 
 
 ## Tools
 
-| Script | Summary |
-| ------ | ------- |
-| [`hash-directory`](tools/hash-directory.md) | Calculates SHA256 for every file in a directory and prints an overall digest. |
-| [`validate-json`](tools/validate-json.md) | Validates JSON files (single files or directories) and reports syntax errors with line/byte locations. |
-| [`find-large-files`](tools/find-large-files.md) | Lists the biggest files under a path so you can spot oversized artifacts quickly. |
+| Script Doc | Source | Summary |
+| ---------- | ------ | ------- |
+| [`hash-directory`](tools/hash-directory.md) | [`scripts/tools/hash-directory.cs`](../../scripts/tools/hash-directory.cs) | Calculates SHA256 for every file in a directory and prints an overall digest. |
+| [`validate-json`](tools/validate-json.md) | [`scripts/tools/validate-json.cs`](../../scripts/tools/validate-json.cs) | Validates JSON files (single files or directories) and reports syntax errors with line/byte locations. |
+| [`find-large-files`](tools/find-large-files.md) | [`scripts/tools/find-large-files.cs`](../../scripts/tools/find-large-files.cs) | Lists the biggest files under a path so you can spot oversized artifacts quickly. |
 
 ## CI/CD
 
