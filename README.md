@@ -1,19 +1,22 @@
-# FileSharp
+# FileSharp ⚙️
 
 ![License](https://img.shields.io/github/license/makushevski/FileSharp)
 ![Stars](https://img.shields.io/github/stars/makushevski/FileSharp?style=social)
 
 FileSharp is a toolkit of single-file C# utilities for DevOps, CI/CD, operations, and database teams. Every tool is a regular C# file that can be executed with `dotnet run`, so you can keep automation scripts versioned together with infrastructure definitions.
 
-## Highlights
+Think of it as a friendly Swiss Army knife for ops chores 🧰—grab a script, run it, and move on with your day. If you need to change something, you can fix it fast.
 
-- **File-based scripts** - no custom runners; each `.cs` file is a self-contained tool.
-- **Modern C#** - top-level statements, nullable annotations, and .NET 10 runtime support.
-- **Deterministic behavior** - scripts define metadata in comments so they can be indexed automatically.
-- **Works anywhere** - Linux, macOS, and Windows as long as the .NET SDK is installed.
-- **Documentation-first** - every script is paired with a short Markdown page inside `docs/`.
+## Highlights ✨
 
-## Repository Layout
+- **📦 File-based scripts** - no custom runners; each `.cs` file is a self-contained tool.
+- **🆕 Modern C#** - top-level statements, nullable annotations, and .NET 10 runtime support.
+- **🧭 Deterministic behavior** - scripts define metadata in comments so they can be indexed automatically.
+- **🌍 Works anywhere** - Linux, macOS, and Windows as long as the .NET SDK is installed.
+- **📚 Documentation-first** - every script is paired with a short Markdown page inside `docs/`.
+- **🧩 Recipes** - you can find some hands on recipes for some scripts in [this table](docs/recipes/README.md).
+
+## Repository Layout 🗂️
 
 ```
 scripts/
@@ -28,7 +31,7 @@ CONTRIBUTING.md
 
 Only a subset of scripts are currently published; new utilities follow the same layout.
 
-## Requirements
+## Requirements 🧪
 
 1. .NET SDK 10.0 or newer (file-based programs require .NET 10 features).
 2. PowerShell, Bash, or any shell capable of launching `dotnet run`.
@@ -40,7 +43,7 @@ Verify your setup:
 dotnet --info
 ```
 
-## Usage
+## Usage 🚀
 
 1. Locate the script you need (see the catalog below).
 2. Run it with `dotnet run <path-to-script> -- <arguments>`.
@@ -61,7 +64,7 @@ Every script prints a short help section when executed without arguments. Follow
 
 The metadata keeps the catalog up to date and powers future automation (indexing, docs, packaging).
 
-## Script Catalog
+## Script Catalog 📚
 
 ### Tools
 
@@ -83,15 +86,16 @@ _(Add entries as they are published.)_
 
 _(Add entries as they are published.)_
 
-More scripts are coming soon. When you add a new tool, describe it under the appropriate category table, link to its doc page, and add the `.cs` location in the summary if helpful.
+More scripts are coming soon. When you add a new tool, describe it under the appropriate category table, link to its doc page, and add the `.cs` location in the summary if helpful. Keep the ideas flowing and brag about your favorites in chat threads 🎉.
 
-## Recipes
+## Recipes 🧩
 
 Scenario guides show how to mix multiple scripts to solve workflow problems (Git hooks, CI stages, operations runbooks).
 
+- **🧩 Recipes** - you can find some hands on recipes for some scripts in [this table](docs/recipes/README.md).
 - [Git Hooks / Pre-commit JSON and Large File Gate](docs/recipes/git-hooks/README.md#pre-commit-json-and-large-file-gate)
 
-## Creating a New Script
+## Creating a New Script 🔧
 
 1. Copy an existing file (e.g., `hash-directory.cs`) into the right category.
 2. Update the metadata block at the top (`name`, `category`, `description`).
@@ -99,14 +103,14 @@ Scenario guides show how to mix multiple scripts to solve workflow problems (Git
 4. Create `docs/scripts/<category>/<script-name>.md` with usage examples, parameters, and caveats.
 5. Update the README catalog and, if needed, add automation examples to `docs/`.
 
-### Script Header Format
+### Script Header Format 📝
 
 Every script starts with the same metadata header, including at least one usage example:
 
 ```csharp
 // # name: Hash Directory
 // # category: tools
-// # description: Считает SHA256-хеш для всех файлов в папке и общий хеш по содержимому/именам.
+// # description: Produce per-file SHA256 checksums and a combined digest.
 // # usage:
 // #   dotnet run scripts/tools/hash-directory.cs -- .
 // #   dotnet run scripts/tools/hash-directory.cs -- C:\Projects\MyApp
@@ -114,17 +118,20 @@ Every script starts with the same metadata header, including at least one usage 
 
 Add additional `// #   ...` usage lines if a script has more than one common invocation. Keep all content in ASCII where possible so documentation renders correctly on any locale.
 
-## Documentation
+## Documentation 📘
 
 - `docs/` contains human-friendly walkthroughs and usage notes.
 - `docs/scripts/<category>/` stores per-script references; feel free to add more directories such as `docs/scripts/ci/`.
 - Keep prose concise and link back to the command examples shown above.
 
-## Contributing
+## Contributing 🤝
 
 We welcome pull requests! Please read `CONTRIBUTING.md` for details on how to set up your environment, follow the coding guidelines, and run verification scripts before opening a PR.
 
-## License
+## License 📄
 
 FileSharp is distributed under the terms of the MIT License. See `LICENSE` for full text.
+
+Happy scripting and automate boldly! 😄
+
 
